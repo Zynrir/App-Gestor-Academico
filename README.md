@@ -13,9 +13,13 @@ App con Docker (Node.js, React y PostgreSQL) para el control total del rendimien
 ## ✨ Características Principales
 
 *   **Gestión por Criterios:** Vincula tareas con Resultados de Aprendizaje (RA) y pesos porcentuales.
+  
 *   **Módulo de Prácticas (FCT):** Predicción de fecha de fin basada en horas diarias y calendario de festivos.
+  
 *   **Modo Estudio:** Temporizador Pomodoro integrado para sesiones de enfoque vinculadas a asignaturas.
+  
 *   **Seguimiento Proactivo:** Flujo de estados de tareas (Abierta, Entregada, Corregida) y sistema de notificaciones.
+  
 *   **Dockerizado:** Arquitectura de microservicios lista para producción.
 
 ---
