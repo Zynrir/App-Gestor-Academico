@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  # -------------------------------------------------------------
+  # SERVICIO DE BASE DE DATOS (PostgreSQL)
+  # -------------------------------------------------------------
+  db:
+    container_name: instituto_db
+    image: postgres:15-alpine
+    restart: always
+    ports:
+      - "5432:5432" # Expuesto para que puedas verlo con DBeaver o pgAdmin desde fuera
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      # Persistencia de datos (para no perderlos al apagar)
+      - postgres_data:/var/lib/postgresql/data
+      # Script de inicialización (Crea tablas automáticamente)
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - app-network
+
+  # -------------------------------------------------------------
+  # SERVICIO BACKEND (Node.js API)
+  # -------------------------------------------------------------
+  backend:
+    container_name: instituto_backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      # Conexión a la BD (El host es el nombre del servicio 'db')
+      DB_HOST: db
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      DB_PORT: 5432
+    depends_on:
+      db:
+        condition: service_healthy # Espera a que la BD esté lista 100%
+    networks:
+      - app-network
+
+  # -------------------------------------------------------------
+  # SERVICIO FRONTEND (React + Nginx)
+  # -------------------------------------------------------------
+  frontend:
+    container_name: instituto_frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      # Pasamos la URL de la API para que React sepa dónde llamar durante el 'build'
+      args:
+        REACT_APP_API_URL: http://localhost:3000/api
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+# -------------------------------------------------------------
+# VOLÚMENES Y REDES
+# -------------------------------------------------------------
+volumes:
+  postgres_data: # Volumen nombrado para persistencia
+
+networks:
+  app-network:
+    driver: bridge

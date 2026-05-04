@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globales opcionales */
+body {
+  background-color: #f3f4f6; /* gris muy claro */
+}
