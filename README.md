@@ -31,3 +31,13 @@ App con Docker (Node.js, React y PostgreSQL) para el control total del rendimien
    ```bash
    git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
    cd tu-repositorio
+
+🛠️ Tecnologías utilizadas
+Frontend: React, Tailwind CSS, Axios.
+
+Backend: Node.js, Express.
+
+Base de Datos: PostgreSQL (con scripts de inicialización automática).
+
+Infraestructura: Docker, Docker Compose, Nginx.
+
