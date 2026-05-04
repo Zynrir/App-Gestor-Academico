@@ -26,13 +26,13 @@ App con Docker (Node.js, React y PostgreSQL) para el control total del rendimien
 
 ## 📸 Vista Previa
 
-> [!IMPORTANT]
-> Sustituye las rutas de abajo por tus capturas reales una vez las subas a tu repositorio en una carpeta llamada `screenshots`.
-
-| Dashboard Principal | Temporizador Pomodoro |
-| :---: | :---: |
-| ![Dashboard](./screenshots/dashboard.png) | ![Pomodoro](./screenshots/pomodoro.png) |
 <img width="1918" height="824" alt="Dashboard" src="https://github.com/user-attachments/assets/d35a0b45-f3b1-47e9-8177-eea4fe115e60" />
+<img width="1912" height="764" alt="Pagina_Tareas" src="https://github.com/user-attachments/assets/3c04089b-f954-4122-b4b9-0ebe7faf3d54" />
+<img width="1903" height="913" alt="Pagina_Practicas" src="https://github.com/user-attachments/assets/961f4c4a-fd89-4812-8384-e5fa4ba265b8" />
+<img width="1900" height="815" alt="Pagina_Pomodoro" src="https://github.com/user-attachments/assets/49465d29-e45d-4b26-9ef5-04e094648714" />
+<img width="1916" height="788" alt="Pagina_Notas" src="https://github.com/user-attachments/assets/56438a00-6951-4bd6-a2a9-7ea61b20b8c1" />
+<img width="1919" height="805" alt="Pagina_Configuracion" src="https://github.com/user-attachments/assets/cb4ba074-64f4-4715-a957-0dd3336607b9" />
+<img width="1900" height="804" alt="Calendario_y_Examenes" src="https://github.com/user-attachments/assets/9d5c8599-7f21-424c-8bb4-0cebf8b824f2" />
 
 ---
 
