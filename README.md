@@ -40,7 +40,7 @@ App con Docker (Node.js, React y PostgreSQL) para el control total del rendimien
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/Zynrir/App-Gestor-Acad-mico.git](https://github.com/Zynrir/App-Gestor-Acad-mico.git)
+   git clone https://github.com/Zynrir/App-Gestor-Acad-mico.git
    cd App-Gestor-Acad-mico
 
 ## **Levantar la aplicación con Docker:**
@@ -54,15 +54,8 @@ Frontend (App): http://localhost:80
 
 Backend (API): http://localhost:3000
 
-🔑 Variables de Entorno
-El sistema utiliza las siguientes variables para la conexión y el servidor:
-Variable,Descripción,Ejemplo
-DB_USER,Usuario de la base de datos PostgreSQL,admin_instituto
-DB_PASSWORD,Contraseña para la base de datos,tu_password_segura
-DB_NAME,Nombre de la base de datos,instituto_db
-PORT,Puerto donde correrá el backend,3000
-
 🛠️ Tecnologías utilizadas
+
 Frontend: React, Tailwind CSS, Axios.
 
 Backend: Node.js, Express.
