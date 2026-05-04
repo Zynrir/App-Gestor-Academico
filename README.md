@@ -32,6 +32,7 @@ App con Docker (Node.js, React y PostgreSQL) para el control total del rendimien
 | Dashboard Principal | Temporizador Pomodoro |
 | :---: | :---: |
 | ![Dashboard](./screenshots/dashboard.png) | ![Pomodoro](./screenshots/pomodoro.png) |
+<img width="1918" height="824" alt="Dashboard" src="https://github.com/user-attachments/assets/d35a0b45-f3b1-47e9-8177-eea4fe115e60" />
 
 ---
 
