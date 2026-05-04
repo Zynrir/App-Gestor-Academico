@@ -20,24 +20,53 @@ App con Docker (Node.js, React y PostgreSQL) para el control total del rendimien
 
 ---
 
+## 📸 Vista Previa
+
+> [!IMPORTANT]
+> Sustituye las rutas de abajo por tus capturas reales una vez las subas a tu repositorio en una carpeta llamada `screenshots`.
+
+| Dashboard Principal | Temporizador Pomodoro |
+| :---: | :---: |
+| ![Dashboard](./screenshots/dashboard.png) | ![Pomodoro](./screenshots/pomodoro.png) |
+
+---
+
 ## 🚀 Instalación y Despliegue
 
 ### Requisitos previos
-*   [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado.
+*   **Docker Desktop** instalado y en ejecución.
 
 ### Pasos para arrancar
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
-   cd tu-repositorio
+   git clone [https://github.com/Zynrir/App-Gestor-Acad-mico.git](https://github.com/Zynrir/App-Gestor-Acad-mico.git)
+   cd App-Gestor-Acad-mico
+
+## **Levantar la aplicación con Docker:**
+
+```bash
+docker-compose up --build
+```
+## Acceso a la plataforma:
+
+Frontend (App): http://localhost:80
+
+Backend (API): http://localhost:3000
+
+🔑 Variables de Entorno
+El sistema utiliza las siguientes variables para la conexión y el servidor:
+Variable,Descripción,Ejemplo
+DB_USER,Usuario de la base de datos PostgreSQL,admin_instituto
+DB_PASSWORD,Contraseña para la base de datos,tu_password_segura
+DB_NAME,Nombre de la base de datos,instituto_db
+PORT,Puerto donde correrá el backend,3000
 
 🛠️ Tecnologías utilizadas
 Frontend: React, Tailwind CSS, Axios.
 
 Backend: Node.js, Express.
 
-Base de Datos: PostgreSQL (con scripts de inicialización automática).
+Base de Datos: PostgreSQL (inicializada vía init.sql).
 
 Infraestructura: Docker, Docker Compose, Nginx.
-
