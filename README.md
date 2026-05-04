@@ -6,6 +6,7 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
 **Gestor Académico Full-Stack** 🚀
+
 Desarrollado en colaboración con IA, este sistema con Docker para el control total del rendimiento escolar. Permite gestionar tareas por criterios de evaluación, calcular notas reales, usar temporizador Pomodoro y predecir el fin de prácticas (FCT) según festivos. Organización profesional con despliegue en un solo comando.
 
 ---
